@@ -1,0 +1,38 @@
+<div class="contenido pd-2 p-tb-0 p-0-cl">
+      <hr>
+      <h2 class="tl-2 tl-cl"><i class="fa fa-shopping-cart tx-plomo"></i> Listado de Sucursales</h2>
+      <div class="buscador">
+            <div class="f-derecha">
+            </div>
+      </div>
+      <div class="tabla">
+            <table border="1" id="listado_producto">
+                  <tr class="bg-azul-mar tx-blanco tx-izquierda">
+                        <th>C&oacute;digo</th>
+                        <th>Nombre</th>
+                        <th align='center'>Direccion</th>
+                        <th align='center'>Empleados</th>
+                        <th align='center'>Acción</th>
+                  </tr>
+                  <% data.map(item=>{ %>
+                        <tr class='datos'>
+                              <td>
+                                    <%= item.id %>
+                              </td>
+                              <td>
+                                    <%= item.nombre %>
+                              </td>
+                              <td>
+                                    <%= item.direccion %>
+                              </td>
+                              <td align='center'>
+                                    <%= item.empleados %> empleados
+                              </td>
+                              <td class="btn-producto"><a href="/update/<%=item.id%>">Editar</a>
+                                    <a href="/delete/<%=item.id%>" class="eliminar">Eliminar</a>
+                              </td>
+                        </tr>
+                        <% })%>
+            </table>
+      </div>
+</div>

@@ -1,5 +1,6 @@
 const pat = require('path')
 const express = require("express")
+var body_parser = require('body-parser');
 const morgan = require('morgan')
 const mysql= require('mysql')
 const myconecction = require('express-myconnection')
@@ -15,14 +16,16 @@ app.use(morgan('dev'))
 app.use(myconecction(mysql,{
       host:'localhost',
       user:'root',
-      password:'user',
+      password:'',
       port:3306,
-      database:'nodejs',
+      database:'tienda',
 },'single'))
-app.use(express.urlencoded({extended:false}));
-
+app.use(express.static(pat.join(__dirname,'public')))
+app.use(express.json())
+app.use(express.urlencoded({extended:true})); 
+app.use(body_parser.urlencoded({extended:true}));
+app.use(express.static(__dirname + '/public'));
 app.use('/',rutas);
 
-app.use(express.static(pat.join(__dirname,'public')))
 
 app.listen(process.env.PORT || 3000)

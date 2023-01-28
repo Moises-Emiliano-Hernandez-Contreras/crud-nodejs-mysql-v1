@@ -1,26 +1,43 @@
 <%- include('partials/navbar')%>
-
-<div class="container mt-5">
-      <div class="row">
-            <div class="col-md-5">
-                  <div class="card">
-                        <div class="card-body">
-                              <form action="/updated/<%=data.id%>" method="POST" class="">
-                                    <div class="form-group">
-                                          <input type="text" name="name"  value="<%=data.name%>" placeholder="name" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                          <input type="text" name="address" value="<%= data.address%>" placeholder="address" class="form-control">                              
-                                    </div>                        
-                                    <div class="form-group">
-                                          <input type="tel" name="phone" value="<%=data.phone%>" placeholder="Phone" class="form-control">
-                                    </div>                        
-                                    <button type="submit" class="btn btn-dark">Actualizar</button>
-                              </form>                              
+<div class="d-f">
+<%- include('partials/lateral')%>
+      <div class="container">
+            <div class="scroll">
+                  <div class="contenido pd-2 p-0-cl registrar_user">
+                      
+                      <div class="w100">
+                         <h2 class="tl-2 f-izquierda tl-cl"><i class="fa fa-edit tx-plomo"></i> Editar Sucursal</h2>
+                          <a href="/delete/<%=datos.id%>" class="btn-a sin-fondo f-derecha eliminar"><i class="fa fa-shopping-cart"></i> Eliminar Producto</a>
+                      </div>
+                      <hr>
+                      <form action="/updated/<%=datos.id%>" method="post">
+                        <div class="columna-3">
+                            <label class="pd-2 p-tb-0 p-0-cl">
+                                Nombre de sucursal :
+                                <input type="text" class="campo" name="sucursal" value="<%=datos.nombre%>" placeholder="Sucursal Oriente"
+                                    required>
+                            </label>
+                            <label class="pd-2 p-tb-0 p-0-cl">
+                                Dirección de sucursal:
+                                <input type="text" class="campo" name="direcc"
+                                    placeholder="Independencia #190 esq.Fiallo" value="<%=datos.direccion%>" required>
+                            </label>
+                            <label class="pd-2 p-tb-0 p-0-cl">
+                                Empleados:
+                                <input type="number" class="campo" name="empleados" placeholder="10" value="<%=datos.empleados%>" required>
+                            </label>
+                            <label class="pd-2 p-tb-0 p-0-cl">                                
+                                <button type="submit" class="boton rd-20 m-t-2 bg-azul-mar m-r-1"><i class="fa fa-edit tx-plomo"></i>Editar</button>
+                            </label>
                         </div>
-                  </div>
-            </div>
-      </div>
-</div>
 
-<%- include('partials/footer')%>
+                    </form>
+                  </div>
+              <!--::::::::::::::::-->
+              
+              <!--::::::::Listado de Producto::::::::::-->
+              
+                 <hr>
+                 <%- include('partials/footer')%>
+              </div>    
+      </div>

@@ -1,0 +1,40 @@
+<%- include('partials/navbar')%>
+    <div class="d-f">
+        <%- include('partials/lateral')%>
+            <div class="container">
+                <div class="scroll">
+                    <div class="contenido pd-2 p-0-cl registrar_user">
+                        <h2 class="tl-2 tl-cl"><i class="fa fa-cart-plus tx-plomo"></i> Registrar Nueva Sucursal</h2>
+                        <hr>
+                        <form action="/add" method="post">
+                            <div class="columna-3">
+                                <label class="pd-2 p-tb-0 p-0-cl">
+                                    Nombre de sucursal :
+                                    <input type="text" class="campo" name="sucursal" placeholder="Sucursal Oriente"
+                                        required>
+                                </label>
+                                <label class="pd-2 p-tb-0 p-0-cl">
+                                    Dirección de sucursal:
+                                    <input type="text" class="campo" name="direcc"
+                                        placeholder="Independencia #190 esq.Fiallo" required>
+                                </label>
+                                <label class="pd-2 p-tb-0 p-0-cl">
+                                    Empleados Necesarios:
+                                    <input type="number" class="campo" name="empleados" placeholder="10" required>
+                                </label>
+                                <label class="pd-2 p-tb-0 p-0-cl">
+                                    <button type="reset" class="boton rd-20 m-t-2 bg-azul-mar m-r-1"><i class="fa fa-ban"></i> Limpiar</button>
+                                    <button type="submit" class="boton rd-20 m-t-2 bg-azul-mar m-r-1"><i
+                                            class="fa fa-plus"></i> Agregar</button>
+                                </label>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!--::::::::::::::::-->
+                    <!--::::::::Listado de Producto::::::::::-->
+                    <%- include('partials/listado')%>
+                        <hr>
+                        <%- include('partials/footer')%>
+                </div>
+            </div>

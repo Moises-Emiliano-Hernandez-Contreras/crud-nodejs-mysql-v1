@@ -1,14 +1,59 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Clientes</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">            
+    <meta charset="UTF-8">
+    <title>Agregar Nuevo Producto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/fontello.css"> -->
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="icon" href="../img/logo.jpg">
+    <!--Icon-Fonts-->
+	<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script>
+        function agregar(){
+			form.txtcodigoproducto.disabled = false;
+			form.txtnombreproducto.disabled = false;
+            form.txtdescripproducto.disabled = false;
+			form.imgproducto.disabled = false;
+			form.txtprecioproducto.disabled = false;
+			form.btnsave.disabled = false;
+            
+			form.txtcodigoproducto.focus();
+		}
+    </script>
+    <style>
+        .menu-lateral nav  #productos{
+            background: #234;
+            color:#fff;
+        }
+        .menu-lateral nav  #productos{
+            background: #234;
+            color:#fff;
+        }
+        .menu-lateral nav  #productos i{
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-      <nav class="navbar navbar-dark bg-dark px-5">
-            <a href="/" class="navbar-brand">Clientes</a>            
-      </nav>
+      <header class="enca bg-blanco s-1">
+            <div class="contenedor">
+                <nav class="menu bg-blanco f-izquierda tx-negro efecto-1 ver_pagina" id="menu">
+                    <a href="/" id="checked" target="_blank"><i class="fa fa-eye tx-color2"></i>  Bienvenido</a>
+                </nav>
+                <div class="icono-empresa">
+                    <a href="/">
+                        <figure>
+                            <img src="../img/logo.jpg" alt="">
+                        </figure>
+                    </a>
+                </div> 
+                <div class="f-derecha centrado usuario_empresa">
+                   <input type="checkbox" id="btn-perfil" class="d-n">
+                   
+                    <label for="btn-perfil" class="btn-perfil">
+                        <span><i class="fa fa-user tx-plomo"></i>Sistema de empleados </span>
+                    </label>
+                </div>
+            </div>
+        </header>

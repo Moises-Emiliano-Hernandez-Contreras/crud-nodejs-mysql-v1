@@ -1,0 +1,46 @@
+<%- include('partials/navbar')%>
+<div class="d-f">
+<%- include('partials/lateral')%>
+      <div class="container">
+            <div class="scroll">
+                  <div class="contenido pd-2 p-0-cl registrar_user">
+                      <h2 class="tl-2 tl-cl"><i class="fa fa-user-plus"></i> Registrar Nuevo Empleado</h2>
+                      <hr>
+                      <form action="/addEmpleados" method="post">
+                         <div class="columna-3">
+                              <label class="pd-2 p-tb-0 p-0-cl">
+                                  Nombre del Empleado :
+                                  <input type="text" class="campo" name="nombre" placeholder="Ingresar nombre del empleado/a" required>
+                              </label>
+                              <label class="pd-2 p-tb-0 p-0-cl">
+                                  Tipo de puesto:
+                                  <select name="tipo" class="campo">
+                                    <option value="Fijo" selected>Fijo</option>
+                                    <option value="Temporal">Temporal</option>
+                                  </select>                                 
+                              </label>
+                              <label class="pd-2 p-tb-0 p-0-cl">
+                                  Sueldo del Empleado :
+                                  <input type="number" class="campo" name="sueldo" placeholder="Ejp. 1000.00"  required>
+                              </label>
+                              <label class="pd-2 p-tb-0 p-0-cl">
+                                Sucursal del Empleado :
+                                <input type="number" class="campo" name="suc" placeholder="Ingresar la sucursal del empleado" required>
+                            </label>                              
+                              <label class="pd-2 p-tb-0 p-0-cl">                                 
+                                <button type="reset" class="boton rd-20 m-t-2 bg-azul-mar m-r-1"><i class="fa fa-ban"></i> Limpiar</button>
+                                <button type="submit" class="boton rd-20 m-t-2 bg-azul-mar m-r-1"><i
+                                        class="fa fa-plus"></i>Agregar</button>                                 
+                              </label>
+                         </div>
+                         
+                      </form>
+                  </div>
+              <!--::::::::::::::::-->
+              
+              <!--::::::::Listado de empelados::::::::::-->
+              <%- include('partials/listaEmpleados')%>
+                 <hr>
+                 <%- include('partials/footer')%>
+              </div>      
+      </div>

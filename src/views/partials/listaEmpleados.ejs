@@ -1,0 +1,46 @@
+<div class="contenido pd-2 p-tb-0 p-0-cl">
+      <hr>
+      <h2 class="tl-2 tl-cl"><i class="fa fa-users"></i> Listado de Empleados</h2>
+      <div class="buscador">
+            <div class="f-derecha">
+            </div>
+      </div>
+      <div class="tabla">
+            <table border="1" id="listado_producto">
+                  <tr class="bg-azul-mar tx-blanco tx-izquierda">
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th align='center'>Sueldo</th>
+                        <th align='center'>Tipo</th>
+                        <th align='center'>Sucursal</th>
+                        <th align='center'>Id Sucursal</th>
+                        <th align='center'>Acción</th>
+                  </tr>
+                  <% data.map(item=>{ %>
+                        <tr class='datos'>
+                              <td>
+                                    <%= item.id_emp %>
+                              </td>
+                              <td>
+                                    <%= item.empleado %>
+                              </td>
+                              <td align='center'>
+                                    $<%= item.sueldo %> pesos
+                              </td>
+                              <td align='center'>
+                                    <%= item.tipo %>
+                              </td>
+                              <td align='center'>
+                                    <%= item.nombre %>
+                              </td>                              
+                              <td align='center'>
+                                    <%= item.id %>
+                              </td>                                                            
+                              <td class="btn-producto"><a href="/updateEmpleado/<%=item.id_emp%>">Editar</a>
+                                    <a href="/deleteEmpleado/<%=item.id_emp%>" class="eliminar">Eliminar</a>
+                              </td>
+                        </tr>
+                        <% })%>
+            </table>
+      </div>
+</div>
